@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+
+<body class="text-center">
+    <form class="form-signin">
+        <img class="mb-4" src="../../../assets/img/img-01.png" alt="" width="72" height="72">
+        
+        <h1 class="h3 mb-3 font-weight-normal">Procede a iniciar sesión</h1>
+        
+        <label for="inputEmail" class="sr-only">Correo o nombre de usuario</label>
+        <input [(ngModel)]="userLogin.username" [(ngModel)]="userLogin.email" name="username" id="inputEmail" class="form-control" placeholder="Correo o Username" required autofocus>
+        
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input [(ngModel)]="userLogin.password" name="password" type="password" id="inputPassword" class="form-control" placeholder=" Contraseña " required>
+        
+        <div class="checkbox mb-3">
+            <label>
+            <input type="checkbox" value="remember-me"> Recordame
+          </label>
+        </div>
+        <div class="text-center p-t-136">
+            <a class="txt2" routerLink ="/register">
+                Crea tu cuenta
+                <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <button (click)="submit()" type="submit" class="btn btn-primary">Iniciar sesión</button>
+       
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
+      </form>
+</body>
+                
+              

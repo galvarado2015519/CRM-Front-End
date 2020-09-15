@@ -1,0 +1,21 @@
+<div class="wrapper">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+
+          <a class="logo form-inline my-2 my-lg-0" routerLink="">
+             CRM 
+          </a>
+          <div class="collapse navbar-collapse contenedor" id="navbarNav">
+            <ul class="navbar-nav alings contenedor">
+                <li class="nav-item active contenedor"><a class="nav-link contenedor" routerLink="/login" *ngIf="token==null">Inicio de Sesión</a></li>
+                <li class="nav-item active contenedor"><a class="nav-link contenedor" routerLink='/register' *ngIf="token==null">Crear cuenta</a></li>
+                <li class="nav-item active contenedor"><a class="nav-link contenedor" routerLink="/work" *ngIf="token!=null">Work</a></li>
+            </ul>
+          </div>
+          <a class="nav-item active nav-link contenedor" *ngIf="token!=null"><img src="../../../assets/img/logout.png" class="contenedor nav-item active flex-row" (click)="logOut()"></a>
+       </nav>
+    </header>
+ </div>

@@ -1,0 +1,19 @@
+<!-- Para utilizar *ngFor necesitamos
+      1. Una variable
+      2. Poner la variable a donde hace referencia en el typeScript -->
+<div class="card" style="width: 18rem;" *ngFor='let tablebody of tables'  >
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{tablebody.name}}</li>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td *ngFor="let tasks of task">{{tasks }}</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </ul>
+  </div>
